@@ -1,0 +1,28 @@
+﻿<Activity mc:Ignorable="sads sap" x:Class="SyntBotsRPAImplementation" sap:VirtualizedContainerService.HintSize="262,248" mva:VisualBasic.Settings="Assembly references and imported namespaces for internal implementation"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System.Core"
+ xmlns:s2="clr-namespace:System;assembly=System"
+ xmlns:s3="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:s4="clr-namespace:System;assembly=System.Runtime.WindowsRuntime"
+ xmlns:s5="clr-namespace:SyntBotsActivities_Utilities;assembly=SyntBotsActivities_Utilities"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sap:VirtualizedContainerService.HintSize="222,208">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Object" Name="exce" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <s5:OpenExcel DisplayName="Open Excel" ExcelDriverKey="[exce]" FilePath="C:\Rahul Patil\CDS_Syntbot\RunMacro\RunMacro\ESSTIMESHEET.xlsm" sap:VirtualizedContainerService.HintSize="200,22" SheetName="Sheet1" />
+    <s5:RunExcelMacro Output="{x:Null}" Parameters="{x:Null}" ExcelDriverKey="[exce]" sap:VirtualizedContainerService.HintSize="200,22" MacroName="FilterAndPivot" />
+  </Sequence>
+</Activity>
